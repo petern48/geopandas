@@ -521,15 +521,21 @@ GeometryCollection
         value:
 
         >>> from shapely.geometry import Point
-        >>> d = {'geometry': [Point(), Point(2, 1), None]}
-        >>> gdf = geopandas.GeoDataFrame(d, crs="EPSG:4326")
-        >>> gdf
+        >>> geoseries = geopandas.GeoSeries(
+        ...     [
+        ...             Point(),
+        ...             Point(2, 1),
+        ...             None
+        ...     ],
+        ...     crs="EPSG:4326"
+        )
+        >>> geoseries
             geometry
         0  POINT EMPTY
         1  POINT (2 1)
         2         None
 
-        >>> gdf.is_empty
+        >>> geoseries.is_empty
         0     True
         1    False
         2    False
