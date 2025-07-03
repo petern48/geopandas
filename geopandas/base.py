@@ -517,7 +517,7 @@ GeometryCollection
 
         Examples
         --------
-        An example of a GeoDataFrame with one empty point, one point and one missing
+        An example of a GeoSeries with one empty point, one point and one missing
         value:
 
         >>> from shapely.geometry import Point
